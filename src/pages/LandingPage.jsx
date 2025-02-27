@@ -12,6 +12,7 @@ import {
   DollarSign,
   Database,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
@@ -90,13 +91,13 @@ const LandingPage = () => {
 
             {/* Animated CTA Button */}
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12">
-              <button className="group relative px-8 py-4 overflow-hidden rounded-xl bg-violet-600 hover:bg-violet-500 transition-colors">
+              <Link to={'/CompanyList'} className="group relative px-8 py-4 overflow-hidden rounded-xl bg-violet-600 hover:bg-violet-500 transition-colors">
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 transition-transform duration-300 transform-gpu group-hover:scale-110" />
                 <span className="relative flex items-center gap-2 text-lg font-semibold">
                   Access Database{" "}
                   <ChevronRight className="group-hover:translate-x-1 transition-transform" />
                 </span>
-              </button>
+              </Link>
               <button className="relative px-8 py-4 rounded-xl bg-transparent border border-violet-500/30 hover:border-violet-500 transition-colors">
                 <span className="text-lg font-semibold">Watch Demo</span>
               </button>
